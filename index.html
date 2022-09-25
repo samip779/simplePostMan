@@ -24,7 +24,9 @@
             type="url"
             placeholder="https://exampleurl.com"
           />
-          <button type="'submit" class="btn btn-primary mt-2 col">Send</button>
+          <button type="'submit" class="btn btn-primary col flex-grow-0">
+            Send
+          </button>
         </div>
 
         <ul class="nav nav-tabs" role="tablist">
@@ -97,7 +99,7 @@
             role="tabpanel"
             aria-labelledby="request-headers-tab"
           >
-            <div data-query-params></div>
+            <div data-request-headers></div>
             <button
               data-add-request-header-btn
               class="mt-2 btn btn-outline-success"
@@ -106,8 +108,36 @@
               Add
             </button>
           </div>
+
+          <div
+            class="tab-pane fade"
+            id="json"
+            role="tabpanel"
+            aria-labelledby="json-tab"
+          >
+            <div
+              data-json-request-body
+              class="overflow-auto"
+              style="max-height: 200px"
+            ></div>
+          </div>
         </div>
       </form>
     </div>
+
+    <template data-key-value-template>
+      <div class="input-group my-2" data-key-value-pair>
+        <input type="text" data-key class="form-control" placeholder="key" />
+        <input
+          type="text"
+          data-value
+          class="form-control"
+          placeholder="value"
+        />
+        <button type="button" data-remove-btn class="btn btn-outline-danger">
+          Remove
+        </button>
+      </div>
+    </template>
   </body>
 </html>
