@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="p-4">
-      <form>
+      <form data-form>
         <div class="input-grout mb-4 row">
-          <select class="form-select flex-grow-0 w-auto col">
+          <select class="form-select flex-grow-0 w-auto col" data-method>
             <option value="GET">GET</option>
             <option value="POST">POST</option>
             <option value="PUT">PUT</option>
@@ -23,6 +23,7 @@
             class="form-control col"
             type="url"
             placeholder="https://exampleurl.com"
+            data-url
           />
           <button type="'submit" class="btn btn-primary col flex-grow-0">
             Send
