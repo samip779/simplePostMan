@@ -26,8 +26,7 @@ requestHeadersContainer.append(createKeyValuePair());
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(keyValuePairsToObjects(queryParamsContainer));
-  console.log(keyValuePairsToObjects(requestHeadersContainer));
+
   axios({
     url: document.querySelector("[data-url]").value,
     method: document.querySelector("[data-method]").value,
